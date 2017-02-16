@@ -1,0 +1,9 @@
+##gitºöÂÔµÄÎÄ¼ş##
+/target/
+.classpath
+.project
+.settings
+/bin/
+/.idea/
+/.settings/
+.tern-project

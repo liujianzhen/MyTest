@@ -1,0 +1,4 @@
+#数据库的配置文件
+dbName = oracle
+dbUserName = admin
+dbPassword = admin
