@@ -1,4 +1,4 @@
-package thread.communicate.wait;
+package thread.communicate;
 
 public interface Number
 {

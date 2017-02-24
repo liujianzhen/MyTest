@@ -19,13 +19,13 @@ public class ServerThread extends Thread{
 			StringBuilder sb = new StringBuilder();
 			String temp = null;
 			while((temp = br.readLine())!=null){
-				sb.append(temp);
+				sb.append(temp+"\n");
 			}
 			socket.shutdownInput();
-			System.out.println(new Date().toString()+"收到客户端的请求："+sb);
+			System.out.println(new Date().toString()+"收到客户端的请求：\n"+sb);
 			Thread.sleep(2000);
 			PrintWriter pw = new PrintWriter(socket.getOutputStream());
-			pw.write("localhost:8080//index.jsp");
+			pw.write("HTTP/1.1 200 OK\nConnection: keep-alive\nContent-Encoding: gzip\nContent-Type: text/html\nDate: Sat, 18 Feb 2017 09:47:11 GMT\nServer: Apache\nVary: Accept-Encoding\nTransfer-Encoding: chunked");
 			pw.flush();
 			socket.shutdownOutput();
 		} catch (IOException e) {

@@ -1,4 +1,4 @@
-package thread.communicate.lock;
+package thread.communicate;
 
 public class IncreaseThread extends Thread
 {

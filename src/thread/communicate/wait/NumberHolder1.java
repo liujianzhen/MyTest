@@ -1,5 +1,7 @@
 package thread.communicate.wait;
 
+import thread.communicate.Number;
+
 /**
  * 此类没有实现线程间的通信
  * 

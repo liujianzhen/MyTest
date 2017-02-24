@@ -4,6 +4,8 @@ import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
+import thread.communicate.Number;
+
 /**
  * 此类没有实现线程间的通信
  * 
@@ -15,7 +17,6 @@ public class NumberHolder2 implements Number
 	private int number = 1;
 
 	private Lock lock = new ReentrantLock();
-
 	// 代表加一操作的 Condition 对象
 	private Condition condition_increase = lock.newCondition();
 	// 代表减一操作的 Condition 对象

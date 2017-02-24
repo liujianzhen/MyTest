@@ -1,4 +1,8 @@
 package thread.communicate.wait;
+
+import thread.communicate.DecreaseThread;
+import thread.communicate.IncreaseThread;
+
 /**
  * 如果是有多个加一和减一的线程，就会出现问题
  * 因为有可能出现一个加一线程完成后唤醒的又是一个加一线程，

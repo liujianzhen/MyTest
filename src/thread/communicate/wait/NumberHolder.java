@@ -1,4 +1,6 @@
 package thread.communicate.wait;
+
+import thread.communicate.Number;
 /**
  * 此类实现了线程间的通信
  * @author liujianzhen

@@ -1,4 +1,4 @@
-package thread.communicate.wait;
+package thread.communicate;
 
 public class DecreaseThread extends Thread
 {
@@ -12,7 +12,7 @@ public class DecreaseThread extends Thread
 	@Override
 	public void run()
 	{
-		for (int i = 0; i < 20; i++)
+		for (int i = 0; i < 10; i++)
 		{
 			number.decrease();
 		}
