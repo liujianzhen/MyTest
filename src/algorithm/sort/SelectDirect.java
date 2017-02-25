@@ -11,17 +11,9 @@ import algorithm.sort.util.NumsArray;
 public class SelectDirect implements Sort{
 
 	private int[] nums;
-	/**
-	 * @param args
-	 * @throws Exception 
-	 */
-	public static void main(String[] args) throws Exception {
-		
-		int[] nums = NumsArray.getNumsArray();
-		int[] numsCopy = NumsArray.getNumsArray();
-		Sort selectDirect = new SortProxy(new SelectDirect(nums));
-		selectDirect.sort();
-		FormatPrint.formatPrint(numsCopy, nums);
+	
+	public SelectDirect(int[] nums) {
+		this.nums = nums;
 	}
 
 	public void sort() {
@@ -40,8 +32,16 @@ public class SelectDirect implements Sort{
 			nums[tempIndex] = temp;
 		}
 	}
-
-	public SelectDirect(int[] nums) {
-		this.nums = nums;
+	/**
+	 * @param args
+	 * @throws Exception 
+	 */
+	public static void main(String[] args) throws Exception {
+		
+		int[] nums = NumsArray.getNumsArray();
+		int[] numsCopy = NumsArray.getNumsArray();
+		Sort selectDirect = new SortProxy(new SelectDirect(nums));
+		selectDirect.sort();
+		FormatPrint.formatPrint(numsCopy, nums);
 	}
 }
