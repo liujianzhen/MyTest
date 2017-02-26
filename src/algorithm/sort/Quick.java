@@ -1,10 +1,11 @@
+package algorithm.sort;
 /**
  * 目前最快的排序算法
  * 优点：极快，移动数据少
  * 缺点：不稳定
+ * 平均时间复杂度 O(nlogn)
+ * 最坏的情况：O(n^2)		最坏情况下不如堆排序和归并排序
  */
-package algorithm.sort;
-
 public class Quick implements Sort
 {
 	private int[] nums;

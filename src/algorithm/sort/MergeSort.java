@@ -1,16 +1,17 @@
+package algorithm.sort;
+
+import algorithm.sort.util.NumsArray;
 /**
  * 归并排序
  * 分治法的典型应用
  * 合并两个有序数列的方法：先比较两个数列的第一个数字，取出最小的那个，并删除数列中取出的数
  * 如何实现两个有序的数列：一直分解到只有一个数据的数列认为是有序数列
  * 先通过递归分解数列，再通过合并数列完成归并排序
- * 时间复杂度：O(nlogn)
+ * 平均时间复杂度：O(nlogn)
+ * 最坏情况的时间复杂度：O(nlogn)
  * 稳定排序
+ * 在 n 较大时，其时间比堆排序更省，但所需辅助存储空间较大
  */
-package algorithm.sort;
-
-import algorithm.sort.util.NumsArray;
-
 public class MergeSort implements Sort
 {
 	private int left;

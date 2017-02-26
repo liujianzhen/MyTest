@@ -1,10 +1,19 @@
 package algorithm.sort;
-
-public class InsertDiect implements Sort
+/**
+ * 直接插入排序
+ * 当序列中的记录"基本有序",或 n 较小时，它是最佳排序
+ * 因此常将其和其他排序方法结合在一起使用
+ * 这是默认最基本的实现
+ * @author liujianzhen
+ *
+ */
+public class InsertDirect extends AbstractInserDirect
 {
 	private int[] nums;
 	
-	public InsertDiect(int[] nums)
+	public InsertDirect(){}
+	
+	public InsertDirect(int[] nums)
 	{
 		this.nums = nums;
 	}
@@ -25,12 +34,7 @@ public class InsertDiect implements Sort
 		}
 	}
 
-	/**
-	 * 将当前数插入到其在有序组中应该插入到的位置
-	 * @param i
-	 * @param pos
-	 */
-	private void moveAndInsert(int initPos, int pos)
+	protected void moveAndInsert(int initPos, int pos)
 	{
 		int num = nums[initPos];
 		for (int i = initPos; i > pos; i--)
@@ -40,13 +44,7 @@ public class InsertDiect implements Sort
 		nums[pos] = num;
 	}
 
-	/**
-	 * 查找当前数应该插入有序组中的位置
-	 * @param num
-	 * @param initPos
-	 * @return
-	 */
-	private int findInsertPos(int initPos)
+	protected int findInsertPos(int initPos)
 	{
 		for (int i = 0; i < initPos; i++)
 		{
@@ -57,11 +55,16 @@ public class InsertDiect implements Sort
 		}
 		return initPos;
 	}
-	
+
+	public void setNums(int[] nums)
+	{
+		this.nums = nums;
+	}
+
 	public static void main(String[] args)
 	{
 		int[] nums = {7,9,3,5,2,0,3};
-		InsertDiect sort = new InsertDiect(nums);
+		InsertDirect sort = new InsertDirect(nums);
 		sort.sort();
 		for (int i = 0; i < nums.length; i++)
 		{
